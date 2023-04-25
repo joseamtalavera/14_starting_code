@@ -14,7 +14,7 @@ export default function Articles () {
   // Get the queryParams from object returned from useSearchParams and set to `title`
   const title = searchParams.get('title');
 
-  const filteredArticles = title ? filterArticles(title, articles) : Object.values(articles)
+  const filteredArticles = title ? filterArticles(articles, title) : Object.values(articles)
 
   return (
     <main>
